@@ -1,0 +1,58 @@
+<div class="form-wraper">
+    <div class="form-container card" *ngIf="login">
+      <div class="form-header">
+        <img src="./../../assets/login.png"  class="main-lock-icon" alt="">
+      </div>
+  
+      <div class="form-body">
+        <div class="justifier">
+            <input matInput placeholder="Nombre" text="email" class="form-input" [(ngModel)]="nomReg">
+        </div>
+        <div class="justifier">
+            <input matInput placeholder="Password" text="password" class="form-input"  [(ngModel)]="passLogin">
+        </div>
+      </div>
+  
+      <div class="form-footer">
+          <button mat-raised-button class="btn custom-btn" (click)="validarAcceso()"> 
+              <mat-icon>input</mat-icon> Login
+          </button>
+          <div class="txt">
+            
+          </div>
+          <a href="https://www.google.com">
+          <button mat-raised-button class="btn"> 
+           <img src="./../../assets/search.svg" alt="" class="google-icon"> Ingresar con Google
+          </button></a>
+      </div>
+      <div class="additional-link">
+        <a routerLink="/signup"> <strong>Crear una cuenta</strong></a>
+      </div>
+    </div>
+<!--Apartado registro-->
+    <div class="form-container card" *ngIf="!login">
+        <div class="form-header">
+          <img src="./../../assets/login.png"  class="main-lock-icon" alt="">
+        </div>
+    
+        <div class="form-body">
+            <div class="justifier">
+                <input matInput placeholder="Nombre" text="nombre" class="form-input"  [(ngModel)]="nomReg">
+            </div>
+          <div class="justifier">
+              <input matInput placeholder="Email" text="email" class="form-input"  [(ngModel)]="mailReg">
+          </div>
+          <div class="justifier">
+              <input matInput placeholder="Contraseña" text="pass" class="form-input"  [(ngModel)]="passReg">
+          </div>
+          <div class="justifier">
+            <input matInput placeholder="Repite contraseña" text="pass" class="form-input"  [(ngModel)]="pass2Reg">
+        </div>
+        </div>
+        <div class="form-footer">
+            <button mat-raised-button class="btn custom-btn"> 
+                <mat-icon>input</mat-icon> Registrarse
+            </button>
+        </div>
+      </div>
+  </div>

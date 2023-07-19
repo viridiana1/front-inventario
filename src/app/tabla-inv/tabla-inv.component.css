@@ -1,0 +1,15 @@
+table{
+    width: 500px;
+}
+
+tr{
+    width:max-content;
+    
+}
+
+th, td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width : 50px;
+    text-align: center;
+}

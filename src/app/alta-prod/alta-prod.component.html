@@ -1,0 +1,25 @@
+<div class="form-container card regProd">
+    <div class="form-header">
+      <img src="./../../assets/registro.png"  class="main-lock-icon" alt="">
+    </div>
+
+    <div class="form-body">
+        <div class="justifier">
+            <input matInput placeholder="Nombre Producto" text="nombre" class="form-input" [(ngModel)]="nomProd" >
+        </div>
+      <div class="justifier">
+          <input matInput placeholder="Num. de serie" text="serie" class="form-input" [(ngModel)]="serProd" >
+      </div>
+      <div class="justifier">
+          <input matInput placeholder="Código" text="cantidad" class="form-input" [(ngModel)]="cantProd" (keyup)="validaNumber()">
+      </div>
+      <div class="justifier">
+        <input matInput placeholder="Categoría" text="categoria" class="form-input" [(ngModel)]="catProd" >
+    </div>
+    </div>
+    <div class="form-footer">
+        <button mat-raised-button class="btn custom-btn" (click)="altaProd()"> 
+            <mat-icon>input</mat-icon> Registrar Producto
+        </button>
+    </div>
+  </div>

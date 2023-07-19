@@ -1,0 +1,22 @@
+<div class="form-wraper">
+    <div class="form-container card">
+
+        <table>
+            <tr>
+                <th>Nombre producto</th>
+                <th>Código</th>
+                <th>Cantidad</th>
+                <th>Categoría</th>
+            </tr>
+            <tr  *ngFor="let product of ejemploProductos">
+                <td>{{product.nombreProducto}}</td>
+                <td>{{product.codigoProducto}}</td>
+                <td>{{product.cantidadProducto}}</td>
+                <td>{{product.categoriaProducto}}</td>
+            </tr>
+        </table>
+        <button mat-raised-button class="btn custom-btn" (click)="agregarProducto()"> 
+            <mat-icon>input</mat-icon> Agregar Producto
+        </button>
+    </div>
+</div>
